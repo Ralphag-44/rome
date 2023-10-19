@@ -150,8 +150,6 @@ main .aguia{
     
         text-align: center;
     
-        background-color: green;
-    
         line-height: 12px;
 
         margin-top: 5vw;
@@ -168,7 +166,7 @@ main .aguia{
     
 }
 
-@media (max-width:650px){
+@media (max-width:640px){
 
     .container main{
         background-color: #9e1e01;
@@ -178,7 +176,7 @@ main .aguia{
         justify-content: center;
         text-align: center;
     
-        width: 80%;
+        width: 95%;
         height: 95%;
     
         margin-bottom: 2vw;
@@ -190,7 +188,7 @@ main .aguia{
     }
     
     main p{
-        font-size: 2.5vw;
+        font-size: 3vw;
         width: 90%;
     }
 
@@ -202,17 +200,46 @@ main .aguia{
     
         text-align: center;
 
-        margin-top: 10vw;
+        margin-top: 6vw;
 
         line-height: 12px;
     
-        font-size: 1.8vw;
+        font-size: 3.4vw;
     
         height: 8vw;
-        width: 24vw;
+        width: 26vw;
     }
 
     main .aguia{
-        width: 60vw;
+        width: 70vw;
+    }
+}
+
+@media (max-width:450px) {
+    main h1{
+        font-size: 6vw;
+    }
+    
+    main p{
+        font-size: 4vw;
+        width: 90%;
+    }
+
+    main button{
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        border-color: white;
+    
+        text-align: center;
+
+        margin-top: 6vw;
+
+        line-height: 12px;
+    
+        font-size: 3.6vw;
+    
+        height: 10vw;
+        width: 28vw;
     }
 }
