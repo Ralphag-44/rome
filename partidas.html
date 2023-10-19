@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/partidas.css">
+    <title>Document</title>
+ </head>
+<body>
+    <div class="container">
+        <main>
+            <div id="tabelas">
+                <p>Partidas</p> 
+                <div class="container">
+                    <div id="tabelas">
+                        <div id ="arena" class="partida" > <!--Exemplo-->
+                            <table id="combates">
+                                <tr id="luta">
+                                <th>Spartacus</th>  <!--Vais por o nome de um campião randomizado aqui -->
+                                <th>Julius Ceaser</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <select  onchange="verific(this.value)" name="vitoria-derrota" id="vitoria-derrota">
+                                        <option value="s_res">Sem Resultado</option>
+                                        <option value="Vitoria">Vitoria</option> 
+                                        <option value="Derrota">Derrota</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select onchange="verific(this.value)" name="vitoria-derrota2" id="vitoria-derrota2">
+                                        <option value="s_res">Sem Resultado</option>
+                                        <option value="Vitoria">Vitoria</option>
+                                        <option value="Derrota">Derrota</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tr>
+                        <tr class="luta">
+                            <tr>
+                                <th>Spartacus</th>  <!--Vais por o nome de um campião randomizado aqui -->
+                                <th>Julius Ceaser</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <select name="vitoria-derrota" id="vitoria-derrota">
+                                        <option value="Vitoria">Vitoria</option> 
+                                        <option value="Derrota">Derrota</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select name="vitoria-derrota2" id="vitoria-derrota2">
+                                        <option value="Vitoria">Vitoria</option>
+                                        <option value="Derrota">Derrota</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tr>
+                    
+        
+                    </table>
+                </div>
+                <div class="butoes">
+                    <button id="random" onclick="rand()">Randomizar</button> <!--Ideia (Não necessario)-->
+                    <button class="IRresultados" onclick="popup()">Resultados</button>    
+                </div>
+                <div class="popup">
+                    <header>
+                        <h1>Resultados</h1>
+                        <button class="close_popup" onclick="close_popup()">X</button>
+                    </header>
+                    <div class="popup_table">
+                        <table>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Vitorias</th>
+                                <th>Derrotas</th>
+                                <th>Nacionalidade</th>
+                            </tr>
+                            <tr>
+                                <td>Julius Cesar</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>Romano</td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <td>Julius Cesar</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>Romano</td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <td>Julius Cesar</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>Romano</td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <td>Julius Cesar</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>Romano</td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <td>Julius Cesar</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>Romano</td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <td>Julius Cesar</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>Romano</td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <td>Julius Cesar</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>Romano</td>
+                            </tr>
+                        </table>
+                        <table>
+                                <td>Julius Cesar</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>Romano</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="Scripts/script.js"></script>
+    <script>al()</script>
+    <script>
+        
+        function popup(){
+            const popup = document.querySelector('.popup')
+
+            popup.style.top = '65px'
+
+        }
+
+        function close_popup(){
+            const popup = document.querySelector('.popup')
+
+            popup.style.top = '-10000px'
+        }
+    </script>
+</body>
+</html>
