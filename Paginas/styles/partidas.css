@@ -16,13 +16,14 @@
     border: solid 3px black;
 
     width: 55vw;
-    height: 30vw;
+    height: 25vw;
     border-radius: 5px;
 }
 
 #tabelas p {
-    font-size: 2vw;
+    font-size: 1.8vw;
     text-decoration: underline;
+    padding: 10px;
 }
 
 button{
@@ -103,11 +104,12 @@ select{
 }
 
 .popup header h1{
-    margin-left: 340px;
+    margin-left: 20vw;
 }
 
 .popup header .close_popup{
-    margin-left: 300px;
+    margin-left: 10vw;
+    margin-bottom: 6vw;
     text-align: center;
     display: flex;
     align-items: center;
@@ -139,6 +141,292 @@ select{
     font-size: 1.5vw;
 }
 
-@media (max-width:800px){
+@media (max-width:1200px) {
+    .partida{
+        background-color: #881a01;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     
+        border: solid 3px black;
+    
+        width: 70vw;
+        height: 60vw;
+        border-radius: 5px;
+    }
+
+    #tabelas p {
+        font-size: 3vw;
+        text-decoration: underline;
+        padding: 10px;
+    }
+    .butoes{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        margin: 10px;
+        width: 100%;
+    }
+    
+    .butoes button{
+        margin-inline: 20px;
+    
+        height: 4vw;
+        width: 10vw;
+        text-align: center;
+        font-size: 1.5vw;
+    }
+
+    table{
+        border-collapse: collapse;
+    
+        width: 100%;
+    }
+    
+    tr{
+        text-align: center;
+    }
+    
+    .partida td, .partida th{
+        border: 2px solid black;
+        border-top: 0;
+        border-left: 0;
+    
+        width: 150px;
+        height: 20px;
+    }
+}
+
+@media (max-width:900px) {
+    .partida{
+        background-color: #881a01;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        border: solid 3px black;
+    
+        width: 70vw;
+        height: 65vw;
+        border-radius: 5px;
+    }
+
+    #tabelas p {
+        font-size: 4vw;
+        text-decoration: underline;
+        padding: 10px;
+    }
+    .butoes{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        margin: 10px;
+        width: 100%;
+    }
+    
+    .butoes button{
+        margin-inline: 20px;
+    
+        height: 5vw;
+        width: 15vw;
+        text-align: center;
+        font-size: 2vw;
+    }
+
+    table{
+        border-collapse: collapse;
+    
+        width: 100%;
+    }
+    
+    tr{
+        text-align: center;
+    }
+    
+    .partida td, .partida th{
+        border: 2px solid black;
+        border-top: 0;
+        border-left: 0;
+    
+        width: 150px;
+        height: 20px;
+    }
+}
+
+@media (max-width:800px) {
+    .partida{
+        background-color: #881a01;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        border: solid 3px black;
+    
+        width: 70vw;
+        height: 95vw;
+        border-radius: 5px;
+    }
+
+    #tabelas p {
+        font-size: 4vw;
+        text-decoration: underline;
+        padding: 10px;
+    }
+    .butoes{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        margin: 10px;
+        width: 100%;
+    }
+    
+    .butoes button{
+        margin-inline: 20px;
+    
+        height: 5vw;
+        width: 15vw;
+        text-align: center;
+        font-size: 2vw;
+    }
+
+    table{
+        border-collapse: collapse;
+    
+        width: 100%;
+    }
+    
+    tr{
+        text-align: center;
+    }
+    
+    .partida td, .partida th{
+        border: 2px solid black;
+        border-top: 0;
+        border-left: 0;
+    
+        width: 150px;
+        height: 20px;
+    }
+}
+
+@media (max-width:640px){
+    .partida{
+        background-color: #881a01;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        border: solid 3px black;
+    
+        width: 70vw;
+        height: 95vw;
+        border-radius: 5px;
+    }
+
+    #tabelas p {
+        font-size: 4vw;
+        text-decoration: underline;
+        padding: 10px;
+    }
+    .butoes{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        margin: 10px;
+        width: 100%;
+    }
+    
+    .butoes button{
+        margin-inline: 20px;
+    
+        height: 5vw;
+        width: 15vw;
+        text-align: center;
+        font-size: 2vw;
+    }
+
+    table{
+        border-collapse: collapse;
+    
+        width: 100%;
+    }
+    
+    tr{
+        text-align: center;
+    }
+    
+    .partida td, .partida th{
+        border: 2px solid black;
+        border-top: 0;
+        border-left: 0;
+    
+        width: 150px;
+        height: 20px;
+    }
+}
+
+@media (max-width:450px) {
+    .partida{
+        background-color: #881a01;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        border: solid 3px black;
+    
+        width: 70vw;
+        height: 170vw;
+        border-radius: 5px;
+    }
+
+    #tabelas p {
+        font-size: 4vw;
+        text-decoration: underline;
+        padding: 10px;
+    }
+    .butoes{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        margin: 10px;
+        width: 100%;
+    }
+    
+    .butoes button{
+        margin-inline: 20px;
+    
+        height: 10vw;
+        width: 22vw;
+        text-align: center;
+        font-size: 3.5vw;
+    }
+
+    table{
+        border-collapse: collapse;
+    
+        width: 100%;
+    }
+    
+    tr{
+        text-align: center;
+    }
+    
+    .partida td, .partida th{
+        border: 2px solid black;
+        border-top: 0;
+        border-left: 0;
+    
+        width: 150px;
+        height: 20px;
+    }
 }
