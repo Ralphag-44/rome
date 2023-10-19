@@ -93,6 +93,8 @@ function verific(mud){
 }
 
 function rand(){
+    
+
     alert("l")
     res_s = ""
     n_duel = document.querySelectorAll("#vitoria-derrota").length
