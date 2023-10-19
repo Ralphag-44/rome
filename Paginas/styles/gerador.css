@@ -4,7 +4,6 @@ main p{
 }
 
 input{
-    margin-left: .2vw;
     width: 3vw;
     height: 2vw;
 
@@ -20,6 +19,7 @@ label{
 
 main button{
     margin-top: 1.5vw;
+    font-size: 1vw;
 }
 
 .prosseguir{
@@ -68,6 +68,17 @@ main button{
 }
 
 @media (max-width:1200px) {
+    main p{
+        width: 80vw;
+        font-size: 1.5vw;
+    }
+    
+    label{
+        font-size: 2vw;
+    }
+
+
+
     main button{
         background-color: black;
         color: white;
@@ -79,27 +90,81 @@ main button{
     
         line-height: 12px;
     
-        font-size: 1.2vw;
+        font-size: 2vw;
     
-        height: 3vw;
-        width: 12vw;
+        height: 5vw;
+        width: 20vw;
     
         cursor: pointer;
     }
     .prosseguir{
         margin: 3vw;
-        padding: .2vw;
+
     }
 }
 
+
+
 @media (max-width:800px) {
     main p{
-        width: 60vw;
+        width: 75vw;
         margin-bottom: 1vw;
     }
     
     label{
-        font-size: 1.4vw;
+        font-size: 1.8vw;
+    }
+
+    input{
+        margin-left: .2vw;
+        width: 6vw;
+        height: 3vw;
+        font-size: 2vw;
+    }
+
+    #gladiadores td input{
+        font-size: 3vw;
+    }
+
+    main button{
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        border-color: white;
+    
+        text-align: center;
+
+        line-height: 12px;
+    
+        font-size: 2vw;
+    
+        height: 5vw;
+        width: 16vw;
+    
+        cursor: pointer;
+    }
+    .prosseguir{
+        margin: 4vw;
+        padding: .2vw;
+    }
+}
+
+@media (max-width:640px){
+    main p{
+        width: 90vw;
+        margin-bottom: 1vw;
+        font-size: 3vw;
+    }
+    
+    label{
+        font-size: 3vw;
+    }
+
+    input{
+        margin-left: .2vw;
+        width: 7vw;
+        height: 4vw;
+    
     }
 
     main button{
@@ -116,25 +181,25 @@ main button{
         font-size: 2vw;
     
         height: 5vw;
-        width: 16vw;
+        width: 20vw;
     
         cursor: pointer;
     }
-    .prosseguir{
-        margin: 4vw;
-        padding: .2vw;
-    }
 }
 
-@media (max-width:600px) {
+@media (max-width:450px) {
     main p{
-        font-size: 3vw;
-        width: 75vw;
+        font-size: 4vw;
+        width: 90vw;
         margin-bottom: 1vw;
     }
     
     label{
-        font-size: 3vw;
+        font-size: 4vw;
+    }
+
+    #gladiadores td input{
+        font-size: 4vw;
     }
 
     main button{
@@ -147,15 +212,14 @@ main button{
     
         line-height: 12px;
     
-        font-size: 3vw;
+        font-size: 4vw;
     
-        height: 7vw;
-        width: 24vw;
+        height: 10vw;
+        width: 36vw;
     
         cursor: pointer;
     }
     .prosseguir{
         margin: 6vw;
-        padding: .2vw;
     }
 }
