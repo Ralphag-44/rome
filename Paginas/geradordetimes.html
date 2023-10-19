@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/gerador.css">
+    <title>Gabriel's and Thiago's Website (Zico too lmfao)</title>
+</head>
+<body>
+    <div class="container">
+        <main>
+            <p>Aceitado o desafio de duelar na arena, agora decida quantos serão os desafiantes, ao título de campeão de Roma.</p>
+            <label for="">Número de Gladiadores:<input type="number" min="2" max="20" id="num_p"></label>
+            <button id="btn-gerar" onclick="p_no()">Gerar Gladiadores</button>
+            <button id="btn-nom" onclick="auto_no()">Nomes Automáticos</button>
+            <div id="gladiadores">
+                <table id="glad_n">
+                    <tr>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <a href="partidas.html"> <button class="prosseguir" text="Butão" onclick="mashup()">Prosseguir</button></a>
+        </main>
+    </div>
+    
+    <script src="Scripts/script.js"></script>
+    <script>localStorage.clear()</script>
+</body>
+</html>
