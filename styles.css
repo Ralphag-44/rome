@@ -1,0 +1,1100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ffb6b6;
+    background-image: url(img/Gladius.png);
+    background-position: center;
+}
+/*Inicio*/
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    text-align: center;
+    color: white;
+    background-color: rgb(255, 0, 0);
+
+}
+
+.inicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin: 4vw auto;
+}
+
+.inicio .title{
+    font-size: 1.8vw;
+}
+
+.inicio p{
+    width: 60%;
+    font-size: 1.2vw;
+    margin: 2vw auto;
+}
+
+.inicio .start{
+    color: white;
+    background-color: black;
+    border-radius: .4vw;
+    padding: .4vw;
+    cursor: pointer;
+    font-size: 1vw;
+    border-color: grey;
+}
+
+.inicio img{
+    width: 50vw;
+}
+
+/*gerador*/
+
+.gerador{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+}
+
+.gerador label{
+    font-size: 2vw;
+}
+
+.gerador label input{
+    font-size: 1.4vw;
+    width: 3vw;
+    margin-inline: .8vw;
+}
+
+.gerador button{
+    color: white;
+    background-color: black;
+    border-color: grey;
+
+    width: 5vw;
+
+    margin-top: 5vw;
+
+    cursor: pointer;
+    font-size: 1vw;
+    border-radius: .4vw;
+    padding: .4vw;
+}
+
+/*Lutadores*/
+
+.lutadores_page{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+
+    transition: .5s ease-in-out;
+}
+
+.lutadores_page p{
+    margin-block: 2vw;
+    font-size: 3vw;
+}
+
+.lutadores_page .lutadores{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65%;
+    background-color: rgb(165, 0, 0);
+    border-radius: .4vw;
+}
+
+.lutadores_page .col1 , .lutadores_page .col2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30vw;
+}
+
+.col1 label, .col2 label{
+    margin-block: .8vw;
+}
+
+.col1 input, .col2 input{
+    width: 20vw;
+}
+
+.lutadores div{
+    margin: 1vw;
+
+}
+
+.lutadores_page button:not(.nomes){
+    color: white;
+    background-color: black;
+    border-color: grey;
+
+    width: 5vw;
+
+    margin-top: 1vw;
+
+    cursor: pointer;
+    font-size: 1vw;
+    border-radius: .4vw;
+    padding: .4vw;
+}
+
+
+.nomes{
+    color: white;
+    background-color: black;
+    border-color: grey;
+    cursor: pointer;
+
+    border-radius: .4vw;
+    padding: .4vw;
+
+    width: 10vw;
+    height: 3vw;
+
+
+
+   font-size: 1vw;
+}
+
+/*Batalhas*/
+
+.batalhas{
+    display: none;
+    position: fixed;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+}
+
+.batalhas h2{
+    font-size: 2.5vw;
+    margin-block: 3vw;
+}
+
+.lutas{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 70vh;
+    margin: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: rgb(172, 2, 2);
+}
+
+.column1, .column2{
+    margin: .7vw;
+}
+
+.luta{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 35vw;
+    border: solid 1px black;
+    margin: .8vw;
+    padding: 1.2vw;
+    padding-inline: 2vw;
+}
+
+.luta label{
+    margin: 1.4vw;
+}
+
+.luta p{
+    font-size: 2vw;
+    text-transform: uppercase;
+}
+
+/*Tabela*/
+
+.utility_btns{
+    display: flex;
+    position: absolute;
+
+    top: 5vw;
+    right: 10vw;
+}
+
+.utility_btns button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    background-color: black;
+    border-color: grey;
+    cursor: pointer;
+
+    width: 3.3vw;
+    height: 3.3vw;
+
+    text-align: center;
+
+    border-radius: .8vw;
+    padding: .5vw;
+
+    margin-inline: .3vw;
+}
+
+.utility_btns button span{
+    font-size: 1.8vw;
+}
+
+
+.tabela_container{
+    background-color: rgba(0, 0, 0, 0.900);
+    position: absolute;
+
+    padding: 1vw;
+
+    top: -200vw;
+    right: 10vw;
+    
+    width: 80%;
+    height: 76%;
+
+    transition: .5s ease-in-out;
+}
+
+.tabela_container div{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.tabela_container h2{
+    margin-block: .8vw;
+    margin-right: 40%;
+}
+
+.tabela_container table{
+    width: 100%;
+    height: 90.5%;
+}
+
+.tabela_container table, .tabela_container th{
+    border: solid 1px white;
+    border-collapse: collapse;
+}
+
+.tabela_container td{
+    border-right: solid 1px white;
+}
+
+.X_btn{
+    color: white;
+    background-color: black;
+    border-color: grey;
+    cursor: pointer;
+
+    height: 1.5vw;
+    width: 1.5vw;
+    border-radius: 50%;
+}
+
+@media (max-width:900px) {
+    .inicio .title{
+        font-size: 2.5vw;
+    }
+    
+    .inicio p{
+        width: 90%;
+        font-size: 1.8vw;
+        margin: 2vw auto;
+    }
+    
+    .inicio .start{
+        color: white;
+        background-color: black;
+        border-radius: 1vw;
+        padding: 1vw;
+        cursor: pointer;
+        font-size: 2vw;
+        border-color: grey;
+    }
+    
+    .inicio img{
+        width: 70vw;
+    }
+
+    /*Gerador*/
+
+    .gerador label{
+        font-size: 5vw;
+    }
+    
+    .gerador label input{
+        font-size: 4vw;
+        width: 6vw;
+        margin-inline: .8vw;
+    }
+    
+    .gerador button{
+        color: white;
+        background-color: black;
+        border-color: grey;
+    
+        width: 14vw;
+    
+        margin-top: 14vw;
+    
+        cursor: pointer;
+        font-size: 2vw;
+        border-radius: 1.5vw;
+        padding: 1.5vw;
+    }
+
+    /*Lutadores*/
+
+    .lutadores_page p{
+        margin-block: 4vw;
+        font-size: 4vw;
+    }
+    
+    .lutadores_page .lutadores{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 65%;
+        background-color: rgb(165, 0, 0);
+        border-radius: .4vw;
+    }
+    
+    .lutadores_page .col1 , .lutadores_page .col2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 30vw;
+    }
+    
+    .col1 input, .col2 input{
+        width: 20vw;
+    }
+    
+    .lutadores div{
+        margin: 1vw;
+    
+    }
+    
+    .lutadores_page button:not(.nomes){
+        color: white;
+        background-color: black;
+        border-color: grey;
+    
+        width: 10vw;
+    
+        margin-top: 2vw;
+    
+        cursor: pointer;
+        font-size: 2vw;
+        border-radius: .8vw;
+        padding: .8vw;
+    }
+    
+    
+    .nomes{
+        color: white;
+        background-color: black;
+        border-color: grey;
+        cursor: pointer;
+    
+        border-radius: .8vw;
+        padding: .4vw;
+    
+        width: 15vw;
+        height: 4vw;
+    
+       font-size: 1.5vw;
+    }
+
+    /*Batalhas*/
+
+    .batalhas{
+        display: none;
+        position: fixed;
+        z-index: 1;
+
+        width: 100%;
+        height: 100%;
+    }
+
+    .batalhas h2{
+        font-size: 2.5vw;
+        margin-block: 3vw;
+    }
+
+    .lutas{
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        height: 70vh;
+        margin: auto;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        background-color: rgb(172, 2, 2);
+    }
+
+    .column1, .column2{
+        margin: .7vw;
+    }
+
+    .luta{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        width: 35vw;
+        border: solid 1px black;
+        margin: .8vw;
+        padding: 1.2vw;
+        padding-inline: 2vw;
+    }
+
+    .luta label{
+        margin: 1.4vw;
+    }
+
+    .luta p{
+        font-size: 2vw;
+        text-transform: uppercase;
+    }
+    /*Tabela*/
+
+    .utility_btns{
+        display: flex;
+        position: absolute;
+
+        top: 4vw;
+        right: 10vw;
+    }
+
+    .utility_btns button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: white;
+        background-color: black;
+        border-color: grey;
+        cursor: pointer;
+
+        width: 4.5vw;
+        height: 4.5vw;
+
+        text-align: center;
+
+        border-radius: .8vw;
+        padding: .5vw;
+
+        margin-inline: .3vw;
+    }
+
+    .utility_btns button span{
+        font-size: 3vw;
+    }
+
+
+    .tabela_container{
+        background-color: rgba(0, 0, 0, 0.900);
+        position: absolute;
+
+        padding: 1vw;
+
+        top: -200vw;
+        right: 10vw;
+        
+        width: 80%;
+        height: 76%;
+
+        transition: .5s ease-in-out;
+    }
+
+    .tabela_container div{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .tabela_container h2{
+        margin-block: .8vw;
+        margin-right: 34%;
+        font-size: 4vw;
+    }
+
+    .tabela_container table{
+        width: 100%;
+        height: 90.5%;
+    }
+
+    .tabela_container table, .tabela_container th{
+        border: solid 1px white;
+        border-collapse: collapse;
+    }
+
+    .tabela_container td{
+        border-right: solid 1px white;
+    }
+
+    .X_btn{
+        color: white;
+        background-color: black;
+        border-color: grey;
+        cursor: pointer;
+
+        height: 1.5vw;
+        width: 1.5vw;
+        border-radius: 50%;
+    }
+}
+
+@media (max-width:620px) {
+    .inicio .title{
+        font-size: 4vw;
+    }
+    
+    .inicio p{
+        width: 90%;
+        font-size: 2.5vw;
+        margin: 2vw auto;
+    }
+    
+    .inicio .start{
+        color: white;
+        background-color: black;
+        border-radius: .8vw;
+        padding: .8vw;
+        cursor: pointer;
+        font-size: 2.5vw;
+        border-color: grey;
+    }
+    
+    .inicio img{
+        width: 80vw;
+    }
+
+    /*Gerador*/
+
+    .gerador label{
+        font-size: 5.5vw;
+    }
+    
+    .gerador label input{
+        font-size: 3.5vw;
+        width: 6vw;
+        margin-inline: .8vw;
+    }
+    
+    .gerador button{
+        color: white;
+        background-color: black;
+        border-color: grey;
+    
+        width: 18vw;
+    
+        margin-top: 12vw;
+    
+        cursor: pointer;
+        font-size: 3vw;
+        border-radius: 2vw;
+        padding: 2vw;
+    }
+
+    /*Lutadores*/
+
+    .lutadores_page p{
+        margin-block: 4vw;
+        font-size: 4vw;
+    }
+    
+    .lutadores_page .lutadores{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vw;
+        background-color: rgb(165, 0, 0);
+        border-radius: .4vw;
+    }
+    
+    .lutadores_page .col1 , .lutadores_page .col2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 30vw;
+    }
+
+    .col1 label,.col2 label{
+        display: flex;
+        flex-direction: column;
+        font-size: 2vw;
+    }
+    
+    .col1 input, .col2 input{
+        width: 20vw;
+        height: 2.8vw;
+    }
+    
+    .lutadores div{
+        margin: 1vw;
+    
+    }
+    
+    .lutadores_page button:not(.nomes){
+        color: white;
+        background-color: black;
+        border-color: grey;
+    
+        width: 20vw;
+    
+        margin-top: 2vw;
+    
+        cursor: pointer;
+        font-size: 4vw;
+        border-radius: 1.4vw;
+        padding: 1.4vw;
+
+        margin-bottom: 10px;
+    }
+    
+    
+    .nomes{
+        color: white;
+        background-color: black;
+        border-color: grey;
+        cursor: pointer;
+    
+        border-radius: .8vw;
+        padding: .6vw;
+    
+        width: 20vw;
+        height: 8vw;
+    
+       font-size: 2.5vw;
+    }
+    /*Batalhas*/
+
+    .batalhas{
+        display: none;
+        position: fixed;
+        z-index: 1;
+
+        width: 100%;
+        height: 100%;
+    }
+
+    .batalhas h2{
+        font-size: 4vw;
+        margin-block: 3vw;
+        margin-bottom: 7vw;
+    }
+
+    .lutas{
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        height: 80vh;
+        margin: auto;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        background-color: rgb(172, 2, 2);
+    }
+
+    .column1, .column2{
+        margin: .7vw;
+    }
+
+    .luta{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        width: 35vw;
+        border: solid 1px black;
+        margin: .8vw;
+        padding: 1.2vw;
+        padding-inline: 2vw;
+    }
+
+    .luta label{
+        margin: 1.4vw;
+    }
+
+    .luta p{
+        font-size: 2vw;
+        text-transform: uppercase;
+    }
+
+    /*Tabela*/
+
+    .utility_btns{
+        display: flex;
+        position: absolute;
+
+        top: 8vw;
+        right: 10vw;
+    }
+
+    .utility_btns button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: white;
+        background-color: black;
+        border-color: grey;
+        cursor: pointer;
+
+        width: 5vw;
+        height: 5vw;
+
+        text-align: center;
+
+        border-radius: 1vw;
+        padding: 1vw;
+
+        margin-inline: .3vw;
+    }
+
+    .utility_btns button span{
+        font-size: 3vw;
+    }
+
+
+    .tabela_container{
+        background-color: rgba(0, 0, 0, 0.900);
+        position: absolute;
+
+        padding: 1vw;
+
+        top: -200vw;
+        right: 10vw;
+        
+        width: 80%;
+        height: 90%;
+
+        transition: .5s ease-in-out;
+    }
+
+    .tabela_container div{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .tabela_container h2{
+        margin-block: .8vw;
+        margin-right: 33%;
+    }
+
+    .tabela_container table{
+        width: 100%;
+        height: 90.5%;
+    }
+
+    .tabela_container table, .tabela_container th{
+        border: solid 1px white;
+        border-collapse: collapse;
+    }
+
+    .tabela_container td{
+        border-right: solid 1px white;
+    }
+
+    .X_btn{
+        color: white;
+        background-color: black;
+        border-color: grey;
+        cursor: pointer;
+
+        margin-right: 1vw;
+
+        height: 1.5vw;
+        width: 1.5vw;
+        border-radius: 50%;
+    }
+}
+
+@media (max-width:450px) {
+    .inicio .title{
+        font-size: 4vw;
+    }
+    
+    .inicio p{
+        width: 90%;
+        font-size: 3vw;
+        margin: 10vw auto;
+    }
+    
+    .inicio .start{
+        color: white;
+        background-color: black;
+        border-radius: 1.4vw;
+        padding: 1.4vw;
+        cursor: pointer;
+        font-size: 4vw;
+        border-color: grey;
+    }
+    
+    .inicio img{
+        width: 90vw;
+    }
+
+    /*Gerador*/
+
+    .gerador label{
+        font-size: 7vw;
+    }
+    
+    .gerador label input{
+        font-size: 6vw;
+        width: 10vw;
+        margin-inline: .8vw;
+    }
+    
+    .gerador button{
+        color: white;
+        background-color: black;
+        border-color: grey;
+    
+        width: 24vw;
+    
+        margin-top: 24vw;
+    
+        cursor: pointer;
+        font-size: 4vw;
+        border-radius: 3vw;
+        padding: 2vw;
+    }
+
+    /*Lutadores*/
+
+    .lutadores_page p{
+        margin-block: 4vw;
+        font-size: 8vw;
+    }
+    
+    .lutadores_page .lutadores{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60%;
+        width: 90%;
+        background-color: rgb(165, 0, 0);
+        border-radius: .4vw;
+    }
+    
+    .lutadores_page .col1 , .lutadores_page .col2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 30vw;
+    }
+
+    .col1 label,.col2 label{
+        display: flex;
+        flex-direction: column;
+        font-size: 3vw;
+        margin-block: .5vw;
+    }
+    
+    .col1 input, .col2 input{
+        width: 20vw;
+        height: 3vw;
+    }
+    
+    .lutadores div{
+        margin: 1vw;
+    }
+    
+    .lutadores_page button:not(.nomes){
+        color: white;
+        background-color: black;
+        border-color: grey;
+    
+        width: 18vw;
+    
+        margin-top: 15vw;
+    
+        cursor: pointer;
+        font-size: 3vw;
+        border-radius: 2vw;
+        padding: 1.5vw;
+
+        margin-bottom: 10px;
+    }
+    
+    
+    .nomes{
+        color: white;
+        background-color: black;
+        border-color: grey;
+        cursor: pointer;
+
+        border-radius: 1.5vw;
+        padding: .8vw;
+    
+        width: 26vw;
+        height: 10vw;
+    
+       font-size: 3vw;
+    }
+    /*Batalhas*/
+
+    .batalhas{
+        display: none;
+        position: fixed;
+        z-index: 1;
+
+        width: 90%;
+        height: 100%;
+    }
+
+    .batalhas h2{
+        font-size: 4vw;
+        margin-block: 3vw;
+        margin-bottom: 7vw;
+    }
+
+    .lutas{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+        height: 80vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        background-color: rgb(172, 2, 2);
+    }
+
+    .column1, .column2{
+        margin: 0vw;
+    }
+
+    .luta{
+        display: flex;
+        justify-content: center;
+        width:98.5%;
+        border: solid 1px black;
+    }
+
+    .luta p{
+        font-size: 2.6vw;
+        text-transform: uppercase;
+    }
+    /*Tabela*/
+
+    .utility_btns{
+        display: flex;
+        position: absolute;
+
+        top: 8vw;
+        right: 4vw;
+    }
+
+    .utility_btns button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: white;
+        background-color: black;
+        border-color: grey;
+        cursor: pointer;
+
+        width: 6vw;
+        height: 6vw;
+
+        text-align: center;
+
+        border-radius: 1.6vw;
+        padding: 2vw;
+
+        margin-inline: .3vw;
+    }
+
+    .utility_btns button span{
+        font-size: 4vw;
+    }
+
+
+    .tabela_container{
+        background-color: rgba(0, 0, 0, 0.900);
+        position: absolute;
+
+        padding: 1vw;
+
+        top: -200vw;
+        right: 0vw;
+        
+        width: 100%;
+        height: 90%;
+
+        transition: .5s ease-in-out;
+    }
+
+    .tabela_container div{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .tabela_container h2{
+        font-size: 7vw;
+        margin-block: .8vw;
+        margin-right: 17%;
+    }
+
+    .tabela_container table{
+        width: 100%;
+        height: 90.5%;
+    }
+
+    .tabela_container table, .tabela_container th{
+        border: solid 1px white;
+        border-collapse: collapse;
+    }
+
+    .tabela_container td{
+        border-right: solid 1px white;
+    }
+
+    .X_btn{
+        color: white;
+        background-color: black;
+        border-color: grey;
+        cursor: pointer;
+
+        margin: 5vw;
+
+        height: 1.5vw;
+        width: 1.5vw;
+        border-radius: 50%;
+    }
+}

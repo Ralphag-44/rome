@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="img/Gladius.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Ludus</title>
+</head>
+<body>
+    <header></header>
+    <main id="main-div" class="container">
+        <div class="inicio">
+            <img src="img/RomanEagle.png" alt="">
+
+            <h1 class="title">TORNEIO DE GLADIADORES GRECO-ROMANO</h1>
+            <p>ESPECTADORES DE TODOS OS QUINTÕES DO VELHO MUNDO, VEM AO GRANDE LUDUS ROMANO, ONDE GLADIADORES, ANTES MEROS ESCRAVOS, DENTRE O SANGUE E AREIA, SE TORNAM DEUSES NA ARENA.</p>
+
+            <button onclick="start()" class="start">Aceitar Desafio</button>
+        </div>
+        <div class="gerador">
+                <label for="">Quantos escravos lutarão na arena<input value="2" type="number" min="2" max="20"></label>
+                <button onclick="start()">continuar</button>
+        </div>
+        <div class="lutadores_page">
+            <p>Lutadores</p>
+                <div class="lutadores">
+                    <div class="col1">
+                        <label for="">LUTADOR 01: <input type="text"></label>
+                        <label for="">LUTADOR 02: <input type="text"></label>
+                        <label for="">LUTADOR 03: <input type="text"></label>
+                        <label for="">LUTADOR 04: <input type="text"></label>
+                        <label for="">LUTADOR 05: <input type="text"></label>
+                        <label for="">LUTADOR 06: <input type="text"></label>
+                        <label for="">LUTADOR 07: <input type="text"></label>
+                        <label for="">LUTADOR 08: <input type="text"></label>
+                        <label for="">LUTADOR 09: <input type="text"></label>
+                        <label for="">LUTADOR 10: <input type="text"></label>
+                    </div>
+                    <div class="col2">
+                        <label for="">LUTADOR 11: <input type="text"></label>
+                        <label for="">LUTADOR 12: <input type="text"></label>
+                        <label for="">LUTADOR 13: <input type="text"></label>
+                        <label for="">LUTADOR 14: <input type="text"></label>
+                        <label for="">LUTADOR 15: <input type="text"></label>
+                        <label for="">LUTADOR 16: <input type="text"></label>
+                        <label for="">LUTADOR 17: <input type="text"></label>
+                        <label for="">LUTADOR 18: <input type="text"></label>
+                        <label for="">LUTADOR 19: <input type="text"></label>
+                        <label for="">LUTADOR 20: <input type="text"></label>
+                    </div>
+                    <button onclick="no_al()" class="nomes">Nomes Automaticos</button>
+                </div>
+            
+            <button onclick="start()">A Luta!</button>
+        </div>
+        <div class="batalhas">
+            <h2>Selecione os vencedores</h2>
+            <div class="lutas">
+                <div class="column1">
+                    <div class="luta">
+                        <p>Nom0</p>
+                        <label for=""><input type="radio" name="vitoria_derrota"></label>
+                        <label for=""><input type="radio" name="vitoria_derrota"></label>
+                        <p>Nom1</p>
+                    </div>
+                </div>
+                <div class="column2">
+ 
+                </div>
+            </div>
+            <div class="utility_btns">
+                <button><span class="material-symbols-outlined" onclick="confirm()">check</span></button>
+                <button class="tabela_btn" onclick="results()"><span class="material-symbols-outlined">casino</span></button>
+                <button><span class="material-symbols-outlined" onclick="reset()">delete</span></button>
+                <button class="tabela_btn" onclick="abrir_tabela()"><span class="material-symbols-outlined">table</span></button>
+            </div>
+            <div class="tabela_container">
+                <div>
+                    <h2>Resultados</h2>
+                    <button onclick="fechar_tabela()" class="X_btn">X</button>
+                </div>
+                <table id="resultados">
+                    <tr>
+                        <th>Nome</th>
+                        <th>Vitorias</th>
+                        <th>Derrotas</th>
+                        <th>Nacionalidade</th>
+                    </tr>
+                    <tr>
+                        <td>Cla</td>
+                        <td>win</td>
+                        <td>los</td>
+                        <td>Romano</td>
+                    </tr>                
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        window.cof = true
+        const pagina = document.querySelector('.inicio');
+        const gerador = document.querySelector('.gerador');
+        const lutadores = document.querySelector('.lutadores_page');
+        const lutas = document.querySelector('.batalhas');
+        const tabela = document.querySelector('.tabela_container')
+
+        var aguia = new Audio('img/Eagle.mp3');
+        var sound_track = new Audio('img/Ludus_SoundTrack.mp3');
+      
+        function abrir_tabela(){
+            if (window.cof){
+            alert("Confirme os resultados para ver a tabela.")
+        }
+             else{
+            tabela.style.top = '5vw'
+    }
+        }
+
+        function fechar_tabela(){
+            tabela.style.top = '-200vw'
+        }
+
+        
+        function start(){
+            
+            if(pagina.style.display != 'none'){
+                pagina.style.display = 'none';
+                /*aguia.play();*/
+                sound_track.play();
+                gerador.style.display = 'flex'
+            }else if(gerador.style.display != 'none'){
+                gerador.style.display = 'none'
+                lutadores.style.display = 'flex'
+                num_jog()
+            }else if(lutadores.style.display != 'none' ){
+                erro = false
+                for (i = 0; i < window.num_jog; i++){
+               if(document.getElementsByClassName("lutadores")[0].getElementsByTagName("input")[i].value == ""){
+                erro = true
+               }
+               }
+               if (erro){
+                alert("Por favor, preencha os nomes para poder jogar")
+               }
+               else {
+                mashup()
+                lutadores.style.display = 'none'
+                lutas.style.display = 'block'
+                matches()
+               }
+            }
+           
+        }
+        function save(){
+            if (localStorage.length > 0){
+                document.documentElement.innerHTML = JSON.parse(localStorage.getItem('Save_P'))
+                if (window.confr_al == window.null){
+                window.confr_al = JSON.parse(localStorage.getItem("confron"))
+                 }
+                   compep = JSON.parse(localStorage.getItem("Competidores_Dados"))
+
+            }
+        }
+        save()
+    </script>
+</body>
+</html>
